@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Console.Write("Enter the length of the pipe: ");
-            decimal length = Math.Round(Convert.ToDecimal(Console.ReadLine()));
+            double length = Math.Round(Convert.ToDouble(Console.ReadLine()) / 0.5) * 0.5;
             Console.WriteLine(length);
         }
     }
