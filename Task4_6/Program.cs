@@ -5,18 +5,27 @@
         static void Main(string[] args)
         {
             int a = Convert.ToInt32(Console.ReadLine());
+            int count = 0;
 
             if (a == 1)
             {
                 Console.WriteLine("Является");
             }
+            else if (a == 0)
+            {
+                Console.WriteLine("Не является");
+            }
             else
             {
                 do
                 {
-                    a %= 2;
+                    if (a % 2 != 0)
+                    {
+                        count++;
+                    }
+                    a /= 2;
                 } while (a >= 2);
-                if (a == 0)
+                if (count == 0)
                 {
                     Console.WriteLine("Является");
                 }
