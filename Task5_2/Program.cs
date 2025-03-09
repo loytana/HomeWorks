@@ -1,4 +1,4 @@
-﻿namespace Task5_1
+﻿namespace Task5_2
 {
     internal class Program
     {
@@ -6,18 +6,27 @@
         {
             Random rnd = new Random();
             int[] task = new int[10];
-            int count = 0;
+            int countEven = 0;
+            int countOdd = 0;
+            int countNull = 0;
             for (int i = 0; i < task.Length; i++)
             {
                 task[i] = rnd.Next(0, 101);
-                count = (task[i] % 2 == 0) ? ++count : --count;
-                Console.Write("{0} ", task[i]); //для проверки
+                if (task[i] % 2 == 0)
+                {
+                    countEven++;
+                }
+                else
+                {
+                    countOdd++;
+                }
+                Console.Write("{0} ", task[i]);
             }
-            if (count > 0)
+            if (countEven > countOdd)
             {
                 Console.WriteLine("\nБольше чётных");
             }
-            else if (count < 0)
+            else if (countOdd < countEven)
             {
                 Console.WriteLine("\nБольше нечётных");
             }
