@@ -6,34 +6,27 @@
         {
             Random rnd = new Random();
             int[] task = new int[10];
-            int countEven = 0;
-            int countOdd = 0;
+            int countPos = 0;
+            int countNeg = 0;
             int countNull = 0;
             for (int i = 0; i < task.Length; i++)
             {
-                task[i] = rnd.Next(0, 101);
-                if (task[i] % 2 == 0)
+                task[i] = rnd.Next(-20, 21);
+                if (task[i] > 0)
                 {
-                    countEven++;
+                    countPos++;
+                }
+                else if (task[i] < 0)
+                {
+                    countNeg++;
                 }
                 else
                 {
-                    countOdd++;
+                    countNull++;
                 }
-                Console.Write("{0} ", task[i]);
+                Console.Write("{0} ", task[i]); //проверка
             }
-            if (countEven > countOdd)
-            {
-                Console.WriteLine("\nБольше чётных");
-            }
-            else if (countOdd < countEven)
-            {
-                Console.WriteLine("\nБольше нечётных");
-            }
-            else
-            {
-                Console.WriteLine("\nКоличество чётных и нечётных элементов массива одинаково");
-            }
+            Console.WriteLine("\nКоличество пол. чисел = {0}\nКоличество отр. чисел = {1}\nКоличество равных нулю = {2}", countPos, countNeg, countNull);            
         }
     }
 }
