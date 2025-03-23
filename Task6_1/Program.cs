@@ -17,11 +17,6 @@ namespace Task6_1
                     found.Clear();
                     length = words[i].Length; 
                     found.Append(words[i]);
-                    found.Replace(",", "");
-                    found.Replace(":", "");
-                    found.Replace(";", "");
-                    found.Replace("(", "");
-                    found.Replace(")", "");
                 }
             }
             Console.WriteLine(found);
