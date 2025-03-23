@@ -16,11 +16,7 @@ namespace Task6_4
                 Console.WriteLine("Введите город: ");
                 string city = Console.ReadLine();
                 StringBuilder info = new StringBuilder().Append("Имя: ");
-                info.Append(name);
-                info.Append(", Возраст: ");
-                info.Append(age);
-                info.Append(", Город: ");
-                info.Append(city);
+                info.Append(name + ", Возраст: " + age + ", Город: " + city);
                 Console.WriteLine(info.ToString());
                 Console.WriteLine("Если нужно ввести ещё данные, то нажмите \" + \"");
                 conditionString = Console.ReadLine();
