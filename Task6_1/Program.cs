@@ -20,6 +20,8 @@ namespace Task6_1
                     found.Replace(",", "");
                     found.Replace(":", "");
                     found.Replace(";", "");
+                    found.Replace("(", "");
+                    found.Replace(")", "");
                 }
             }
             Console.WriteLine(found);
