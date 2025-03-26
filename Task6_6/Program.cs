@@ -9,13 +9,13 @@ namespace Task6_6
         static void Main(string[] args)
         {
             string password = "";
-            Regex regex = new Regex(@"\+[0-9]\([0-9][0-9][0-9]\)[0-9][0-9][0-9]-[0-9]{2,}-[0-9][0-9]");
+            Regex regex = new Regex(@"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!#;%:?*]).{14,}$");
             do
             {
                 Console.WriteLine("Создайте пароль");
-                password = Console.ReadLine();
+                password = Console.ReadLine();                
             }
-            while (regex.IsMatch(password));
+            while (!regex.IsMatch(password));
         }
     }
 }
