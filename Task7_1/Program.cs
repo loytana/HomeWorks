@@ -12,7 +12,7 @@
             int d = int.Parse(Console.ReadLine());
             int e = int.Parse(Console.ReadLine());
             int f = int.Parse(Console.ReadLine());
-            if (Square(a,b,c) > Square(d,e,f))
+            if (Square(a, b, c) > Square(d, e, f))
                 Console.WriteLine("У первого треугольника площадь больше");
             else if (Square(a, b, c) == Square(d, e, f))
                 Console.WriteLine("Площади равны");
@@ -21,8 +21,8 @@
         }
         static double Square(int a, int b, int c)
         {
-            double p = (a + b + c)/2;
-            return Math.Sqrt(p*(p-a)*(p-b)*(p-c));
+            double p = (a + b + c) / 2;
+            return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
         }
     }
 }
