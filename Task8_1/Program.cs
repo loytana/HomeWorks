@@ -13,7 +13,7 @@
                 {
                     Console.WriteLine("Введи код операции");
                     int k = Convert.ToInt32(Console.ReadLine());
-                    ValidateCode(k);
+                    ValidateCode(k); // я тут усложнил что-то, можно через default описать было некорректное значение, но я решил заморочиться с методом:)
                     switch (k)
                     {
                         case 1:
