@@ -11,7 +11,7 @@
             Console.WriteLine(book.GetInfo());
         }
     }
-    class Book
+    public class Book
     {
         private string _title;
         private string _author;
