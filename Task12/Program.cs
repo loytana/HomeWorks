@@ -17,8 +17,13 @@ namespace Task12
                 new Book<int, string> (32, "Your Roman", "Modern era", "Oman"),
                 new Book<int, string> (42, "Romeo and Juliet", "Modern era", "Shakespeare")
             };
-            Console.WriteLine(FindBook(booksOne, "F-1234"));
-            Console.WriteLine(FindBook(booksTwo, 42));
+            var foundBook1 = FindBook(booksOne, "F-1234");
+            var foundBook2 = FindBook(booksTwo, 42);
+            Console.WriteLine(foundBook1?.ToString() ?? "Книга не найдена");
+            Console.WriteLine(foundBook2?.ToString() ?? "Книга не найдена");
+
+            var notFoundBook = FindBook(booksOne, "X-9999");    //дополнительно сделал
+            Console.WriteLine(notFoundBook?.ToString() ?? "Книга не найдена");
 
         }
         public static Book<T, U> FindBook<T, U>(Book<T, U>[] books, T code)
@@ -50,7 +55,7 @@ namespace Task12
 
         public override string ToString()
         {
-            return $"{Code} ({typeof(T).Name}), Название: {Title}, Автор: {Author}, Год: {PublicationYear} ({typeof(U).Name})";
+            return $"Код: {Code} ({typeof(T).Name}), Название: {Title}, Автор: {Author}, Год: {PublicationYear} ({typeof(U).Name})";
         }
     }
 }
