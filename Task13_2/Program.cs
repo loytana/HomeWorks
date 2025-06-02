@@ -1,5 +1,6 @@
 ﻿namespace Task13_2
 {
+    // Уточню на всякий случай, что тут использовал ИИ, т.к. полностью самостоятельно не смог докрутить
     // Делегат для события изменения состояния
     public delegate void DeviceStateChangedHandler(object sender, DeviceStateEventArgs e);
 
